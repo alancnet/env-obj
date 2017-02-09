@@ -1,7 +1,7 @@
-module.exports = function(env, delim) {
+module.exports = function(env, obj, delim) {
   if (!env) env = process.env;
+  if (!obj) obj = {};
   if (!delim) delim = '.';
-  var ret = {};
   function put(r, k, v) {
     var w = k.split(delim);
     var a = w[0];
@@ -20,7 +20,7 @@ module.exports = function(env, delim) {
   }
   for (var key in env) {
     var val = env[key];
-    put(ret, key, val);
+    put(obj, key, val);
   }
-  return ret;
+  return obj;
 }

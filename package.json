@@ -1,6 +1,6 @@
 {
   "name": "env-obj",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "converts process.env into a deep object",
   "main": "index.js",
   "scripts": {
